@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: backend-api
+    build:
+      context: .
+    ports:
+      - 8080:8080
+      - 9229:9229
+    volumes:
+      - ./:/home/node/app
+      - /home/node/app/node_modules
+    command: yarn dev
+    depends_on:
+      - db
+  db:
+    build: .docker/postgres
+    restart: always
+    tty: true
+    ports:
+      - '5432:5432'
+    volumes:
+      - .docker/dbdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=test
+      - POSTGRES_USER=postgres
