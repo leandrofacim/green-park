@@ -1,4 +1,4 @@
-import { UploadPDFController } from '@/application/controllers/condominio/upload-pdf-controller'
+import { UploadPDFController } from '@/application/controllers/upload-pdf-controller'
 import { Controller } from '@/application/controllers/controller'
 import UploadPdf from '@/domain/use-cases/upload-pdf'
 import { BoletoRepository } from '@/infra/repositories/postgres/boleto'

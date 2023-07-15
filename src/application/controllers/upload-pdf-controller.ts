@@ -1,5 +1,5 @@
 import { HttpResponse, ok } from '@/application/helpers/http'
-import { Controller } from '../controller'
+import { Controller } from './controller'
 import UploadPdf from '@/domain/use-cases/upload-pdf'
 
 interface HttpRequest {
