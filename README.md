@@ -32,8 +32,9 @@ npm run typeorm migration:run
 
 O servidor estará disponível em http://localhost:8080.
 
-
 tem dois arquivos na raiz boleto.csv e boleto.pdf
+
+collection insomnia está na raiz do projeto
 
 ## Licença
 
